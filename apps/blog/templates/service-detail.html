@@ -1,0 +1,252 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<!-- start of banner -->
+<div id="banner-class">
+	<div class="container">
+    	<div class="row">
+        	<div class="banner-inner col-xs-12 text-center clearfix">
+            	<h1>Описание услуги</h1>
+                <p> <a href="{% url 'index' %}"> Главная </a> <i class="fa fa-angle-right"></i> услуги </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of banner -->
+
+<!-- start of content -->
+<div id="content-class">
+	<div class="container">
+    	<div class="row">
+            <div class="content-left col-md-8 col-sm-7">
+                <h1>Название услуги на сайте</h1>
+                <p>Ретроконверсия национального наследия специфицирует рыночный комплексный анализ ситуации. Медиа, вопреки мнению П.Друкера, все еще интересна для многих. Один из признанных классиков маркетинга Ф.Котлер определяет это так: конкурент переворачивает рыночный ребрендинг, используя опыт предыдущих кампаний. </p>
+                <h2>Характеристики</h2>
+                <ul>
+                	<li class="clearfix">
+                        <div class="content-inner-left clearfix">
+                            <h3>Категория:</h3>                               
+                        </div>
+                        <div class="content-inner-right clearfix">
+                            <p>Название категории</p>                            
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="content-inner-left clearfix">
+                            <h3>Время:</h3>                               
+                        </div>
+                        <div class="content-inner-right clearfix">
+                            <p> 09:00 - 15:00</p>                            
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="content-inner-left clearfix">
+                            <h3>Цена:</h3>                               
+                        </div>
+                        <div class="content-inner-right clearfix">
+                            <p>  5 000 р.</p>                            
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="content-inner-left clearfix">
+                            <h3>Врач:</h3>                               
+                        </div>
+                        <div class="content-inner-right clearfix">
+                            <p> Иван Дионтьев</p>                            
+                        </div>
+                    </li>
+                </ul>
+                <div class="content-center clearfix">
+                 	<div class="left col-md-7">
+                    	<h3>Информация</h3>
+                        <p>До недавнего времени считалось, что ретроконверсия национального наследия создает экспериментальный отраслевой стандарт. Лидерство в продажах, согласно Ф.Котлеру, недостижимо. До недавнего времени считалось, что рекламоноситель нетривиален.</p>
+                        <a class="btn">Подробнее</a>
+                    </div>
+                    <div class="right col-md-5">
+                    	<img src="images/class-img16.jpg" alt="" />
+                    </div>
+                </div>	
+                <h2>Похожие услуги</h2>
+                <div class="col-md-6">
+                    <div class="contentBox">
+                        <h2>Название услуги</h2>
+                        <img src="images/class-img3.jpg" alt="" />
+                        <div class="contentBox-inner clearfix">
+                            <a class="btn-book" href="service-detail.html" >Подробнее</a>
+                            <p>Категория: название</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contentBox">
+                        <h2>Название услуги</h2>
+                        <img src="images/class-img4.jpg" alt="" />
+                        <div class="contentBox-inner clearfix">
+                            <a class="btn-book" href="service-detail.html" >Подробнее</a>
+                            <p>Категория: название</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right col-md-4 col-sm-5">
+                <div class="sidebar">
+                    <div class="header clearfix">
+                        <span id="sidebar-ico" class="fa fa-star"></span>
+                        <h2>Новости</h2>
+                    </div>
+                    <div class="content clearfix">
+                        <ul>
+                            <li class="clearfix borderNon">
+                                <div class="sidebar-inner-left-content">
+                                    <img src="images/class-img14.jpg" alt="доктор" />                                   
+                                </div>
+                                <div class="sidebar-inner-right-content clearfix">
+                                    <h4>Спонсорство существенно детерминирует </h4>
+                                    <p>31 августа 2016</p>
+                                    <p>Иван Дионтьев</p>                            
+                                </div>
+                            </li>
+                            <li class="clearfix borderNon">
+                                <div class="sidebar-inner-left-content">
+                                    <img src="images/class-img15.jpg" alt="доктор" />
+                                </div>
+                                <div class="sidebar-inner-right-content">
+                                    <h4>Спонсорство существенно детерминирует </h4>
+                                    <p>31 августа 2016</p>
+                                    <p>Иван Дионтьев</p>                             
+                                </div>
+                            </li>
+                            <li class="clearfix borderNon">
+                                <div class="sidebar-inner-left-content">
+                                    <img src="images/class-img21.png" alt="доктор" />                                   
+                                </div>
+                                <div class="sidebar-inner-right-content">
+                                    <h4>Спонсорство существенно детерминирует </h4>
+                                    <p>31 августа 2016</p>
+                                    <p>Иван Дионтьев</p>                           
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="header clearfix">
+                        <span id="sidebar-ico" class="fa fa-clock-o"></span>
+                        <h2>Часы работы </h2>
+                    </div>
+                    <div class="content clearfix">
+                        <ul>
+                            <li class="clearfix">
+                                <div class="sidebar-inner-left">
+                                    <h3>Будни:</h3>                               
+                                </div>
+                                <div class="sidebar-inner-right">
+                                    <h3> 09:00 – 18:00</h3>                            
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="sidebar-inner-left">
+                                    <h3>Выходные:</h3>                             
+                                </div>
+                                <div class="sidebar-inner-right">
+                                    <h3> 09:00 – 15:00</h3>                            
+                                </div>
+                            </li>
+                            <li class="clearfix borderNon">
+                                <div class="sidebar-inner-left clearfix">
+                                    <h3>Звонки: </h3>                               
+                                </div>
+                                <div class="sidebar-inner-right clearfix">
+                                    <h3>Круглосуточно</h3>                          
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               <div class="sidebar">
+                    <div class="header clearfix">
+                        <span id="sidebar-ico" class="fa fa-phone"></span>
+                        <h2>Горячая линия</h2>
+                    </div>
+                    <div class="content last-content">
+                        <p class="pad">Организация слубы маркетинга экономит потребительский</p>
+                        <p class="padNon"><i class="fa fa-phone"> </i> +7 123 456 78 90<br><i class="fa fa-mobile-phone"> </i>
+                          +7 521 852 93 45 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of banner -->
+
+<!-- start of servicse -->
+<div id="services-class">
+	<div class="container">
+    	<div class="row">
+			<div class="services-top text-center">
+            	<h1>Наш <strong>персонал</strong></h1>
+            </div>
+            <div class="contentBox col-md-3">
+            	<div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img10.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img11.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img12.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img13.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>
+<!-- end of servicse -->
+
+{% endblock %}

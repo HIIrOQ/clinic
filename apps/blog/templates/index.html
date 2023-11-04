@@ -15,7 +15,7 @@
         	<div class="banner-inner jw-animate-gen clearfix"  data-gen-offset="100%" data-gen="fadeInDown">
                 <div class="banner-inner-right">
                 	<h2> медицинские услуги </h2>
-                    <h1> ШАБЛОН HTML5 </h1>
+                    <h1> Астиопатии </h1>
             		<a href="#form-site" class="btn btn-banner">ЗАПИСАТЬСЯ НА ПРИЕМ <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -29,23 +29,23 @@
 <div id="services" class="clearfix">
 	<div class="container">
     	<div class="row">
-        	<div class="services-top text-center jw-animate-gen clearfix noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+        	<div class="services-top text-center jw-animate-gen clearfix " data-gen-offset="100%" data-gen="fadeInDown">
             	<h1> Медицинский центр - <span class="bold">Medics </span> </h1>
             </div>
             <div class="services-inner clearfix">
-            	<div class="service-box jw-animate-gen noOpacity col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="90%" data-gen="fadeIn">
+            	<div class="service-box jw-animate-gen  col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="90%" data-gen="fadeIn">
                 	<img src="{% static 'images/doc-service1.png' %}" alt="" />
-                    <a href="service-detail.html" class="span3"> УКАЗАНИЕ УСЛУГ </a>
+                    <a href="{% url 'service_detail' %}" class="span3"> УКАЗАНИЕ УСЛУГ </a>
                     <p> Точечное воздействие, конечно, транслирует<br> выставочный стенд, повышая конкуренцию. </p>
                 </div>
-                <div class="service-box jw-animate-gen noOpacity col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="80%" data-gen="fadeIn">
-                	<img src="images/doc-service2.png" alt="" />
-                    <a href="service-detail.html" class="span4"> КОНСУЛЬТАЦИИ </a>
+                <div class="service-box jw-animate-gen  col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="80%" data-gen="fadeIn">
+                	<img src="{% static 'images/doc-service2.png'%}" alt="" />
+                    <a href="{% url 'contact' %}" class="span4"> КОНТАКТЫ </a>
                     <p> Точечное воздействие, конечно, транслирует<br> выставочный стенд, повышая конкуренцию. </p>
                 </div>
-                <div class="service-box jw-animate-gen noOpacity col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="80%" data-gen="fadeIn">
-                	<img src="images/doc-service3.png" alt="" />
-                    <a href="service-detail.html" class="span5"> ЛУЧШИЕ ВРАЧИ </a>
+                <div class="service-box jw-animate-gen  col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="80%" data-gen="fadeIn">
+                	<img src="{% static 'images/doc-service3.png' %}" alt="" />
+                    <a href="{% url 'doctor' %}" class="span5"> НАШИ ВРАЧИ </a>
                     <p> Точечное воздействие, конечно, транслирует<br> выставочный стенд, повышая конкуренцию. </p>
                 </div>
             </div>
@@ -61,15 +61,17 @@
         	<div class="form-content  col-lg-7 col-md-6 col-sm-6">
             	<h1> Записаться на прием - <span class="bold">сейчас! </span> </h1>
                 <ul>
-                	<li class="digit1 jw-animate-gen noOpacity" data-gen-offset="90%" data-gen="fadeInDown"> В рамках концепции Акоффа и Стэка,<br> сервисная стратегия вырождена.  </li>
-                    <li class="digit2 jw-animate-gen noOpacity" data-gen-offset="88%" data-gen="fadeInDown"> Интересно отметить, что креатив<br> одновременно специфицирует опрос. </li>
-                    <li class="digit3 jw-animate-gen noOpacity" data-gen-offset="86%" data-gen="fadeInDown"> Управление брендом<br> отталкивает ролевой медиавес.  </li>
-                    <li class="digit4 jw-animate-gen noOpacity" data-gen-offset="85%" data-gen="fadeInDown"> Стимулирование сбыта искажает рыночный<br> бюджет на размещение. </li>
+                	<li class="digit1 jw-animate-gen " data-gen-offset="90%" data-gen="fadeInDown"> В рамках концепции Акоффа и Стэка,<br> сервисная стратегия вырождена.  </li>
+                    <li class="digit2 jw-animate-gen " data-gen-offset="88%" data-gen="fadeInDown"> Интересно отметить, что креатив<br> одновременно специфицирует опрос. </li>
+                    <li class="digit3 jw-animate-gen " data-gen-offset="86%" data-gen="fadeInDown"> Управление брендом<br> отталкивает ролевой медиавес.  </li>
+                    <li class="digit4 jw-animate-gen " data-gen-offset="85%" data-gen="fadeInDown"> Стимулирование сбыта искажает рыночный<br> бюджет на размещение. </li>
                 </ul>
             </div>
             <div class="form-inner col-lg-4 col-md-5 col-sm-5">
-            	<img src="images/formbg.png" alt="" />
+            	<img src="{% static 'images/formbg.png' %}" alt="" />
             	<form id="contact" class="registerForm" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p}}
                     <input type="text" name="name" placeholder="Ваше имя*" required>
                     <input type="email"   name="email" placeholder="Email*" required >
                     <input type="text" name="phone" placeholder="Телефон*" required >
@@ -77,6 +79,7 @@
                     <input type="submit" name="submit" class="submit submit-button" value="ГОТОВО">
                 </form>
             </div>
+            <div id="response-message"></div>
         </div>
     </div>
 </div>
@@ -87,10 +90,10 @@
 	<div class="container">
     	<div class="row">
         	<div class="doctor-inner clearfix">
-                <div class="doctor-top text-center jw-animate-gen noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+                <div class="doctor-top text-center jw-animate-gen " data-gen-offset="100%" data-gen="fadeInDown">
                     <h1> Наши <span class="bold"> доктора </span> </h1>
                 </div>
-            	<div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="90%" data-gen="fadeIn">
+            	<div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen " data-gen-offset="90%" data-gen="fadeIn">
                 	<a href="doctor-detail.html"><img src="images/class-img22.png" alt="" /></a>
                     <a href="doctor-detail.html"> Иван Дионтьев </a>
                     <p> врач </p>
@@ -98,7 +101,7 @@
                     <a href="#"> <i class="fa fa-twitter" ></i> </a>
                     <a href="#"> <i class="fa fa-google" ></i> </a>
                 </div>
-                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="80%" data-gen="fadeIn">
+                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen " data-gen-offset="80%" data-gen="fadeIn">
                 	<a href="doctor-detail.html"><img src="images/class-img23.png" alt="" /></a>
                     <a href="doctor-detail.html"> Иван Дионтьев </a>
                     <p> врач </p>
@@ -106,7 +109,7 @@
                     <a href="#"> <i class="fa fa-twitter" ></i> </a>
                     <a href="#"> <i class="fa fa-google" ></i> </a>
                 </div>
-                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="75%" data-gen="fadeIn">
+                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen " data-gen-offset="75%" data-gen="fadeIn">
                 	<a href="doctor-detail.html"><img src="images/class-img24.png" alt="" /></a>
                     <a href="doctor-detail.html"> Иван Дионтьев </a>
                     <p> врач </p>
@@ -114,7 +117,7 @@
                     <a href="#"> <i class="fa fa-twitter" ></i> </a>
                     <a href="#"> <i class="fa fa-google" ></i> </a>
                 </div>
-                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeIn">
+                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen " data-gen-offset="70%" data-gen="fadeIn">
                 	<a href="doctor-detail.html"><img src="images/class-img25.png" alt="" /></a>
                     <a href="doctor-detail.html"> Иван Дионтьев </a>
                     <p> врач </p>
@@ -132,7 +135,7 @@
 <div id="video-site" class="clearfix">
 	<div class="container">
     	<div class="row">
-        	<div class="video-content col-lg-5 col-md-6 col-sm-6 jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeInLeft">
+        	<div class="video-content col-lg-5 col-md-6 col-sm-6 jw-animate-gen " data-gen-offset="70%" data-gen="fadeInLeft">
             	<h1> Видео блок <br> <span class="bold"> нашей компании </span>  </h1>
                 <p> Анализ рыночных цен охватывает формирование имиджа,<br> не считаясь с затратами. Пресс-клиппинг, как следует из<br> вышесказанного, традиционно консолидирует формирование имиджа. Эластичность спроса нейтрализует конвергентный продуктовый ассортимент.</p>
                 <a href="#form-site" class="btn btn-video">ЗАКАЗАТЬ! </a>
@@ -149,12 +152,12 @@
 <div id="membership-package" class="clearfix">
 	<div class="container">
     	<div class="row">
-        	<div class="membership-top text-center jw-animate-gen noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+        	<div class="membership-top text-center jw-animate-gen " data-gen-offset="100%" data-gen="fadeInDown">
             	<h1> Наши <span class="bold"> цены и товары </span> </h1>
             </div>
-            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen noOpacity" data-gen-offset="90%" data-gen="fadeIn">
+            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen " data-gen-offset="90%" data-gen="fadeIn">
             	<div class="membership-box-inner">
-                    <h2> 5 000 р. </h2>
+                    <h2> 2 000 сом. </h2>
                     <h3> СТАНДАРТ </h3>
                     <p> Обслуживание клиентов </p>
                     <p> Техническая поддержка </p>
@@ -164,9 +167,9 @@
                     <a href="#form-site" class="btn form-btn"> ЗАКАЗАТЬ </a>
                 </div>
             </div>
-            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen noOpacity" data-gen-offset="80%" data-gen="fadeIn">
+            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen " data-gen-offset="80%" data-gen="fadeIn">
             	<div class="membership-box-inner">
-                    <h2 class="greenbg"> 10 000 р. </h2>
+                    <h2 class="greenbg"> 3 000 р. </h2>
                     <h3> <span class="green"> БИЗНЕС </span>  </h3>
                     <p> Обслуживание клиентов </p>
                     <p> Техническая поддержка </p>
@@ -176,10 +179,10 @@
                     <a href="#form-site" class="btn form-btn"> ЗАКАЗАТЬ </a>
                 </div>
             </div>
-            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeIn">
+            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen " data-gen-offset="70%" data-gen="fadeIn">
             	<div class="membership-box-inner">
-                    <h2 class="bluebg">  15 000 р. </h2>
-                    <h3> <span class="blue"> ПРЕМИУМ </span> </h3>
+                    <h2 class="bluebg">  5 000 р. </h2>
+                    <h3> <span class="blue"> АЙЖАН САБЫРБЕКОВНА </span> </h3>
                     <p> Обслуживание клиентов </p>
                     <p> Техническая поддержка </p>
                     <p> Помощь партнерам </p>
@@ -195,38 +198,6 @@
 <!-- end of membership section -->
 
 <!-- start of testimonial section -->
-<div id="testimonial-site" class="clearfix">
-	<div class="container">
-    	<div class="row">
-        	<div class="testimonial-top text-center jw-animate-gen noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
-            	<h1> Отзывы <span class="bold"> клиентов </span> </h1>
-            </div>
-            <div class="testimonial-box col-lg-6 col-md-6 jw-animate-gen noOpacity" data-gen-offset="80%" data-gen="fadeIn">
-            	<div class="testimonial-box-content text-center">
-            	    <p>  "Анализ рыночных цен охватывает формирование имиджа,<br> не считаясь с затратами. Пресс-клиппинг, как следует<br> из вышесказанного, традиционно консолидирует формирование<br> имиджа. Эластичность спроса нейтрализует конвергентный<br> продуктовый ассортимент."  </p>
-                </div>
-                <div class="testimonial-box-author">
-                	<img src="images/testimonials_pics_03.png" alt="" />
-                    <div class="testimonial-box-name">
-                    	<h2> Иван Дионтьев </h2>
-                        <h2> клиент </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-box col-lg-6 col-md-6 jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeIn">
-            	<div class="testimonial-box-content text-center">
-            	    <p>  "Анализ рыночных цен охватывает формирование имиджа,<br> не считаясь с затратами. Пресс-клиппинг, как следует<br> из вышесказанного, традиционно консолидирует формирование<br> имиджа. Эластичность спроса нейтрализует конвергентный<br> продуктовый ассортимент."  </p>
-                </div>
-                 <div class="testimonial-box-author">
-                	<img src="images/testimonials_pics_05.png" alt="" />
-                    <div class="testimonial-box-name">
-                    	<h2> Иван Дионтьев </h2>
-                        <h2> клиент </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 {% endblock %}

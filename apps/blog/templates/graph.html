@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+
+<!-- start of banner -->
+<div id="banner-class">
+	<div class="container">
+    	<div class="row">
+        	<div class="banner-inner col-xs-12 text-center clearfix">
+            	<h1>Графики приема</h1>
+                <p> <a href="{% url 'index' %}"> Главная </a> <i class="fa fa-angle-right"></i> Прием </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of banner -->
+
+<!-- start of content -->
+<div id="content-schedule">
+	<div class="container">
+    	<div class="row">
+        	<div class="schedule-top clearfix text-center">
+            	<h2>ПОИСК</h2>
+                <ul>
+                	<li>ALL <i class="fa fa-angle-down"></i>
+                        <ul class="schedule-dropdown">
+                        	<li>Название пункта</li>
+                            <li>Название пункта</li>
+                            <li>Название пункта</li>
+                            <li>Название пункта</li>
+                            <li>Название пункта</li>
+                            <li class="border-bottom">Название пункта</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="table-responsive schedule-table clearfix">
+            	<table class="table" border="1">
+                	 <thead>
+                        <tr class="table-row">
+                            <th>ВРЕМЯ</th>
+                            <th>ПОНЕДЕЛЬНИК</th>		
+                            <th>ВТОРНИК</th>
+                            <th>СРЕДА</th>
+                            <th>ЧЕТВЕРГ</th>
+                            <th>ПЯТНИЦА</th>
+                            <th>СУББОТА</th>
+                            <th>ВОСКРЕСЕНЬЕ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td class="col-color3 col-color2 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>		
+                            <td class="col-color1"></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color1"></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td></td>		
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td></td>
+                            <td></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>		
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td></td>
+                            <td></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td></td>		
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td class="col-color1"></td>		
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td></td>		
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td class="col-color1"></td>		
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color1"></td>
+                          </tr>
+                          <tr>
+                            <td class="col-color col-color1">Дионтьев И.И.</td>
+                            <td></td>		
+                            <td></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color1"></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color3 col-bg"><a href="doctor.html">9.00 - 13.00</a></td>
+                            <td class="col-color1"></td>
+                          </tr>
+                          
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of content -->
+
+<!-- start of servicse -->
+<div id="services-class">
+    <div class="container">
+        <div class="row">
+            <div class="services-top text-center">
+                <h1>Наш <strong>персонал</strong></h1>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img10.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img11.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img12.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contentBox col-md-3">
+                <div class="contentBox-top clearfix">
+                    <h2>Иван Дионтьев</h2>
+                    <p>доктор</p>
+                </div>
+                <img src="images/class-img13.jpg" alt="" />
+                <div class="contentBox-inner clearfix">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of servicse -->
+
+{% endblock %}

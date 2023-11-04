@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Medics - мидицинский шаблон сайта HTML5</title>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+<link href=  "{% css/bootstrap.css %}"  rel="stylesheet" type="text/css">
+
+<link href="{% css/style.css %}" rel="stylesheet" type="text/css">
+<link href="{% css/font-awesome.css %}" rel="stylesheet" type="text/css">
+<link href="{% ss/animate-custom.css %}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body id="home">
+
+<!-- start of header -->
+<div id="header" class="affix clearfix" data-offset-top="60" data-offset-bottom="200">
+	<div class="container">
+    	<div class="row">
+        	<div class="logo col-md-3 clearfix">
+            	<a href="index.html"><img src="images/logo.png" /></a>
+            </div>
+             <nav class="navbar navbar-default menu col-md-9">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse nav-collapse">
+                	<ul class="nav navbar-nav menu_desktop">
+                        <li class="active"><a href="index.html"> Главная </a></li>
+                        <li><a href="about.html"> О нас </a></li>
+                        <li class="group-btn"><a href="service.html"> Услуги </a>
+                           <ul class="child">
+                               <li><a href="service.html">Услуги</a></li>
+                               <li><a href="service-detail.html">Описание услуги</a></li>
+                           </ul>
+               			</li>
+                        <li><a href="graph.html"> График </a></li>
+                        <li class="group-btn"><a href="doctor.html"> Доктора </a>
+                        <ul class="child">
+                            <li><a href="doctor.html">Доктора</a></li>
+                            <li><a href="doctor-detail.html">Описание доктора</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="prices.html"> Цены </a></li>
+                        <li><a href="contact.html"> Контакты </a></li>
+                    </ul>
+               </div>
+           </nav>
+        </div>
+    </div>
+</div>
+<!-- end of header -->    
+    
+<!-- start of banner -->
+<div id="banner" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="banner-inner jw-animate-gen clearfix"  data-gen-offset="100%" data-gen="fadeInDown">
+                <div class="banner-inner-right">
+                	<h2> медицинские услуги </h2>
+                    <h1> ШАБЛОН HTML5 </h1>
+            		<a href="#form-site" class="btn btn-banner">ЗАПИСАТЬСЯ НА ПРИЕМ <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- end of banner -->
+
+<!-- start of services -->
+<div id="services" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="services-top text-center jw-animate-gen clearfix noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+            	<h1> Медицинский центр - <span class="bold">Medics </span> </h1>
+            </div>
+            <div class="services-inner clearfix">
+            	<div class="service-box jw-animate-gen noOpacity col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="90%" data-gen="fadeIn">
+                	<img src="images/doc-service1.png" alt="" />
+                    <a href="service-detail.html" class="span3"> УКАЗАНИЕ УСЛУГ </a>
+                    <p> Точечное воздействие, конечно, транслирует<br> выставочный стенд, повышая конкуренцию. </p> 
+                </div>
+                <div class="service-box jw-animate-gen noOpacity col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="80%" data-gen="fadeIn">
+                	<img src="images/doc-service2.png" alt="" />
+                    <a href="service-detail.html" class="span4"> КОНСУЛЬТАЦИИ </a>
+                    <p> Точечное воздействие, конечно, транслирует<br> выставочный стенд, повышая конкуренцию. </p> 
+                </div>
+                <div class="service-box jw-animate-gen noOpacity col-lg-4 col-md-4 col-sm-4 text-center" data-gen-offset="80%" data-gen="fadeIn">
+                	<img src="images/doc-service3.png" alt="" />
+                    <a href="service-detail.html" class="span5"> ЛУЧШИЕ ВРАЧИ </a>
+                    <p> Точечное воздействие, конечно, транслирует<br> выставочный стенд, повышая конкуренцию. </p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of services -->
+
+<!-- start of form section -->
+<div id="form-site" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="form-content  col-lg-7 col-md-6 col-sm-6">
+            	<h1> Записаться на прием - <span class="bold">сейчас! </span> </h1>
+                <ul>
+                	<li class="digit1 jw-animate-gen noOpacity" data-gen-offset="90%" data-gen="fadeInDown"> В рамках концепции Акоффа и Стэка,<br> сервисная стратегия вырождена.  </li>
+                    <li class="digit2 jw-animate-gen noOpacity" data-gen-offset="88%" data-gen="fadeInDown"> Интересно отметить, что креатив<br> одновременно специфицирует опрос. </li>
+                    <li class="digit3 jw-animate-gen noOpacity" data-gen-offset="86%" data-gen="fadeInDown"> Управление брендом<br> отталкивает ролевой медиавес.  </li>
+                    <li class="digit4 jw-animate-gen noOpacity" data-gen-offset="85%" data-gen="fadeInDown"> Стимулирование сбыта искажает рыночный<br> бюджет на размещение. </li>
+                </ul>
+            </div>
+            <div class="form-inner col-lg-4 col-md-5 col-sm-5">
+            	<img src="images/formbg.png" alt="" />
+            	<form id="contact" class="registerForm" method="post">
+                    <input type="text" name="name" placeholder="Ваше имя*" required>
+                    <input type="email"   name="email" placeholder="Email*" required >
+                    <input type="text" name="phone" placeholder="Телефон*" required >
+                    <textarea class="text-area" name="message*"  cols="12" placeholder="Сообщение" required ></textarea>
+                    <input type="submit" name="submit" class="submit submit-button" value="ГОТОВО">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of form section --> 
+
+<!-- start of doctors section -->
+<div id="doctor-site" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="doctor-inner clearfix">
+                <div class="doctor-top text-center jw-animate-gen noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+                    <h1> Наши <span class="bold"> доктора </span> </h1>
+                </div>
+            	<div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="90%" data-gen="fadeIn">
+                	<a href="doctor-detail.html"><img src="images/class-img22.png" alt="" /></a>
+                    <a href="doctor-detail.html"> Иван Дионтьев </a>
+                    <p> врач </p>
+                    <a href="#"> <i class="fa fa-facebook" ></i> </a>
+                    <a href="#"> <i class="fa fa-twitter" ></i> </a>
+                    <a href="#"> <i class="fa fa-google" ></i> </a>
+                </div>
+                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="80%" data-gen="fadeIn">
+                	<a href="doctor-detail.html"><img src="images/class-img23.png" alt="" /></a>
+                    <a href="doctor-detail.html"> Иван Дионтьев </a>
+                    <p> врач </p>
+                    <a href="#"> <i class="fa fa-facebook" ></i> </a>
+                    <a href="#"> <i class="fa fa-twitter" ></i> </a>
+                    <a href="#"> <i class="fa fa-google" ></i> </a>
+                </div>
+                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="75%" data-gen="fadeIn">
+                	<a href="doctor-detail.html"><img src="images/class-img24.png" alt="" /></a>
+                    <a href="doctor-detail.html"> Иван Дионтьев </a>
+                    <p> врач </p>
+                    <a href="#"> <i class="fa fa-facebook" ></i> </a>
+                    <a href="#"> <i class="fa fa-twitter" ></i> </a>
+                    <a href="#"> <i class="fa fa-google" ></i> </a>
+                </div>
+                <div class="doctor-box col-lg-3 col-md-3 col-sm-6 text-center jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeIn">
+                	<a href="doctor-detail.html"><img src="images/class-img25.png" alt="" /></a>
+                    <a href="doctor-detail.html"> Иван Дионтьев </a>
+                    <p> врач </p>
+                    <a href="#"> <i class="fa fa-facebook" ></i> </a>
+                    <a href="#"> <i class="fa fa-twitter" ></i> </a>
+                    <a href="#"> <i class="fa fa-google" ></i> </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of doctors section --> 
+
+<!-- start of video section -->
+<div id="video-site" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="video-content col-lg-5 col-md-6 col-sm-6 jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeInLeft">
+            	<h1> Видео блок <br> <span class="bold"> нашей компании </span>  </h1>
+                <p> Анализ рыночных цен охватывает формирование имиджа,<br> не считаясь с затратами. Пресс-клиппинг, как следует из<br> вышесказанного, традиционно консолидирует формирование имиджа. Эластичность спроса нейтрализует конвергентный продуктовый ассортимент.</p>
+                <a href="#form-site" class="btn btn-video">ЗАКАЗАТЬ! </a>
+            </div>
+            <div class="video col-lg-6 col-md-6 col-sm-6">
+            	 <iframe width="500" height="315" src="https://www.youtube.com/embed/rdB378Jxhnc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- start of membership section -->
+
+<!-- start of membership section -->
+<div id="membership-package" class="clearfix">
+	<div class="container">
+    	<div class="row"> 
+        	<div class="membership-top text-center jw-animate-gen noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+            	<h1> Наши <span class="bold"> цены и товары </span> </h1>
+            </div>
+            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen noOpacity" data-gen-offset="90%" data-gen="fadeIn">
+            	<div class="membership-box-inner">
+                    <h2> 5 000 р. </h2>
+                    <h3> СТАНДАРТ </h3>
+                    <p> Обслуживание клиентов </p>
+                    <p> Техническая поддержка </p>
+                    <p> Помощь партнерам </p>
+                    <p> Проф. персонал </p>
+                    <p> Другие улсуги </p>
+                    <a href="#form-site" class="btn form-btn"> ЗАКАЗАТЬ </a>
+                </div>
+            </div>
+            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen noOpacity" data-gen-offset="80%" data-gen="fadeIn">
+            	<div class="membership-box-inner">
+                    <h2 class="greenbg"> 10 000 р. </h2>
+                    <h3> <span class="green"> БИЗНЕС </span>  </h3>
+                    <p> Обслуживание клиентов </p>
+                    <p> Техническая поддержка </p>
+                    <p> Помощь партнерам </p>
+                    <p> Проф. персонал </p>
+                    <p> Другие улсуги </p>
+                    <a href="#form-site" class="btn form-btn"> ЗАКАЗАТЬ </a>
+                </div>
+            </div>
+            <div class="membership-box col-lg-4 col-md-4 col-sm-4 text-center jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeIn">
+            	<div class="membership-box-inner">
+                    <h2 class="bluebg">  15 000 р. </h2>
+                    <h3> <span class="blue"> ПРЕМИУМ </span> </h3>
+                    <p> Обслуживание клиентов </p>
+                    <p> Техническая поддержка </p>
+                    <p> Помощь партнерам </p>
+                    <p> Проф. персонал </p>
+                    <p> Другие улсуги </p>
+                    <a href="#form-site" class="btn form-btn"> ЗАКАЗАТЬ </a>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+</div>
+<!-- end of membership section -->
+
+<!-- start of testimonial section -->
+<div id="testimonial-site" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="testimonial-top text-center jw-animate-gen noOpacity" data-gen-offset="100%" data-gen="fadeInDown">
+            	<h1> Отзывы <span class="bold"> клиентов </span> </h1>
+            </div>   
+            <div class="testimonial-box col-lg-6 col-md-6 jw-animate-gen noOpacity" data-gen-offset="80%" data-gen="fadeIn">
+            	<div class="testimonial-box-content text-center">
+            	    <p>  "Анализ рыночных цен охватывает формирование имиджа,<br> не считаясь с затратами. Пресс-клиппинг, как следует<br> из вышесказанного, традиционно консолидирует формирование<br> имиджа. Эластичность спроса нейтрализует конвергентный<br> продуктовый ассортимент."  </p>
+                </div>
+                <div class="testimonial-box-author">
+                	<img src="images/testimonials_pics_03.png" alt="" />
+                    <div class="testimonial-box-name">
+                    	<h2> Иван Дионтьев </h2>
+                        <h2> клиент </h2>
+                    </div> 
+                </div>
+            </div>  
+            <div class="testimonial-box col-lg-6 col-md-6 jw-animate-gen noOpacity" data-gen-offset="70%" data-gen="fadeIn">
+            	<div class="testimonial-box-content text-center">
+            	    <p>  "Анализ рыночных цен охватывает формирование имиджа,<br> не считаясь с затратами. Пресс-клиппинг, как следует<br> из вышесказанного, традиционно консолидирует формирование<br> имиджа. Эластичность спроса нейтрализует конвергентный<br> продуктовый ассортимент."  </p>
+                </div>
+                 <div class="testimonial-box-author">
+                	<img src="images/testimonials_pics_05.png" alt="" />
+                    <div class="testimonial-box-name">
+                    	<h2> Иван Дионтьев </h2>
+                        <h2> клиент </h2>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- start of footerTop section -->
+<div id="footerTop" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="footerBox col-lg-3 col-md-3 col-sm-6 clearfix">
+            	<h1> Информация о компании </h1>
+                <p>Селекция бренда, согласно Ф.Котлеру, амбивалентно. Спонсорство уравновешивает эксклюзивный процесс стратегического планирования. </p>
+                <p>Селекция бренда, согласно Ф.Котлеру, амбивалентно. Спонсорство уравновешивает эксклюзивный процесс стратегического планирования. </p>
+            </div>
+            <div class="footerBox col-lg-3 col-md-3 col-sm-6 clearfix">
+            	<h1> Разделы </h1>
+                <ul class="link">
+                	<li><i class="fa fa-angle-right"></i><a href="about.html"> о нас </a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="service.html"> услуги </a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="graph.html"> график </a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="doctor.html"> врачи </a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="prices.html"> цены </a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="contact.html"> связь </a></li>
+                </ul>
+            </div>
+            <div class="footerBox col-lg-3 col-md-3 col-sm-6 clearfix">
+            	<h1> Последние сообщения </h1>
+                <ul class="tweet">
+                	<li>Департамент маркетинга и продаж,<br> отбрасывая подробности,<br> основан на опыте</li>
+                    <li>Департамент маркетинга и продаж,<br> отбрасывая подробности,<br> основан на опыте</li>
+                    <li>Департамент маркетинга и продаж,<br> отбрасывая подробности,<br> основан на опыте</li>
+                </ul>
+            </div>
+            <div class="footerBox col-lg-3 col-md-3 col-sm-6 clearfix">
+            	<h2> Контакты </h2>
+                <ul class="contact">
+                	<li><h3>Адрес</h3>Россия, Москва, ул. Пушкина 23</li>
+                    <li><h3>Телефон</h3>+7 123 456 78 90</li>
+                    <li class="borderNon"><h3>Email</h3>mail@mail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of footerTop section -->
+
+<!-- start of footer section -->
+<div id="footer" class="clearfix">
+	<div class="container">
+    	<div class="row">
+        	<div class="footer-inner text-center">
+            	<p>
+                	<a href="#" target="_blank"><img src="images/fb.png" alt="facebook" /></a>
+                    <a href="#" target="_blank"><img src="images/twt.png" alt="twitter" /></a>
+                    <a href="#" target="_blank"><img src="images/google.png" alt="google" /></a>
+                    <a href="#" target="_blank"><img src="images/lnkdin.png" alt="linkedin" /></a>
+                    <a href="#" target="_blank"><img class="hideImg" src="images/dribble.png" alt="dribble" /></a>
+                    <a href="#" target="_blank"><img class="hideImg" src="images/social-icon.png" alt="instagram" /></a>
+                    <a href="#" target="_blank"><img class="hideImg" src="images/social-icon2.png" alt="youtube" /></a>
+                </p>
+                <p> © 2016 Medics - мидицинский шаблон сайта HTML5 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of footer section -->
+
+<script type="text/javascript" src="{% js/jquery.js %}"></script>
+<script type="text/javascript" src="{% js/jquery-migrate.min.js %}"></script>
+<script type="text/javascript" src="{% js/bootstrap.js %}" ></script>
+<script type="text/javascript" src="{% js/respond.js %}" ></script>
+<script type="text/javascript" src="{% js/waypoints.js %}" ></script>
+<script type="text/javascript" src="{% js/smoothScroll.js %}" ></script>
+<script type="text/javascript" src="{% js/modernizr.js %}" ></script>
+
+<script type="text/javascript" src="js/script.js" ></script>
+
+</body>
+</html>

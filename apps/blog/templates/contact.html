@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- start of banner -->
+<div id="banner-about">
+	<div class="container">
+    	<div class="row">
+        	<div class="banner-inner col-xs-12 text-center clearfix">
+            	<h1>Наши контакты</h1>
+                <p><a href="{% url 'index' %}"> Главная </a><i class="fa fa-angle-right"></i> Связь  </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of banner -->
+
+<!-- start of content -->
+<div id="contact-content">
+	<div class="container">
+    	<div class="row">
+        	<div class="contact-form col-sm-7">
+            	<h1>Напишите нам</h1>
+                <form id="form" class="registerForm" method="post">
+                	<label>Имя*</label>
+                    <input type="text" id="form_name" name="name" placeholder="Иван Дионтьев" required>
+                    <label>Email*</label>
+                    <input type="text" id="form_email" name="email" placeholder="mail@mail.com" required>
+                    <label>Сообщение</label>
+                    <textarea class="text-area" id="form_message" name="message"  cols="12" placeholder="Ваше сообщение"
+                             required></textarea>
+                     <input type="submit" name="submit" class="submit submit-button submit-btn" value="ГОТОВО">
+                 </form>
+            </div>
+            <div class="contact-info col-md-3 col-sm-4">
+            	<h1>Как нас найти</h1>
+                <ul>
+                	<li>
+                    	Адрес
+                        <p>Россия, Москва, ул. Пушкина 23а</p>
+                    </li>
+                    <li>
+                    	Телефон
+                        <p>+7 123 456 78 90</p>
+                    </li>
+                     <li class="borderNon">
+                    	Email
+                        <p>mail@mail.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>                         
+    </div> 
+</div>
+<!-- end of content -->
+
+<!-- start of map section -->
+<div id="map-site" class="clearfix">
+    <div class="map">
+    	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9246.82439120249!2d37.62969497747071!3d55.742934292762925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1456999123145" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>  
+</div>
+<!--  of map section -->
+{% endblock %}

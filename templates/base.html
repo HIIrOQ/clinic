@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Medics - мидицинский шаблон сайта HTML5</title>
+<title> Medics - мидицинский Астиопатия </title>
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
 <link href=  "{%  static 'css/bootstrap.css' %}"  rel="stylesheet" type="text/css">
@@ -24,7 +24,7 @@
 	<div class="container">
     	<div class="row">
         	<div class="logo col-md-3 clearfix">
-            	<a href="index.html"><img src="images/logo.png" /></a>
+            	<a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" /></a>
             </div>
              <nav class="navbar navbar-default menu col-md-9">
                 <div class="navbar-header">
@@ -34,26 +34,43 @@
                     <span class="icon-bar"></span>
                   </button>
                 </div>
+                 {% if not request.user.is_authenticated %}
+                            <div class="login" style="z-index:5;">
+                                <a href="{% url 'sign_in' %}">Войти</a>
+                            </div>
+                            <div class="register" style="z-index:5;">
+                                <a href="{% url 'register' %}">Регистрация</a>
+                            </div>
+                            {% else %}
+                            <div class="login" style="z-index:5;">
+                                <a href="{% url 'logout' %}">Выйти</a>
+                            </div>
+
+
+
+                            {% endif %}
+
+
                 <div class="collapse navbar-collapse nav-collapse">
                 	<ul class="nav navbar-nav menu_desktop">
-                        <li class="active"><a href="index.html"> Главная </a></li>
-                        <li><a href="about.html"> О нас </a></li>
-                        <li class="group-btn"><a href="service.html"> Услуги </a>
-                           <ul class="child">
-                               <li><a href="service.html">Услуги</a></li>
-                               <li><a href="service-detail.html">Описание услуги</a></li>
-                           </ul>
-               			</li>
-                        <li><a href="graph.html"> График </a></li>
-                        <li class="group-btn"><a href="doctor.html"> Доктора </a>
+                        <li class="active"><a href="{% url 'index'  %}"> Главная </a></li>
+                        <li><a href="{% url 'about'  %}"> О нас </a></li>
+
+
+                        <li><a href="{% url 'graph'  %}"> График </a></li>
+                        <li class="group-btn"><a href="{% url 'doctor'  %}"> Доктора </a>
                         <ul class="child">
-                            <li><a href="doctor.html">Доктора</a></li>
-                            <li><a href="doctor-detail.html">Описание доктора</a></li>
+                            <li><a href="{% url 'doctor'  %}">Доктора</a></li>
+                            <li><a href="{% url 'doctor_detail'  %}">Описание доктора</a></li>
                         </ul>
                         </li>
-                        <li><a href="prices.html"> Цены </a></li>
-                        <li><a href="contact.html"> Контакты </a></li>
+
+                        <li><a href="{% url 'contact'  %}"> Контакты </a></li>
+
+
                     </ul>
+
+
                </div>
            </nav>
         </div>
@@ -75,12 +92,12 @@
             <div class="footerBox col-lg-3 col-md-3 col-sm-6 clearfix">
             	<h1> Разделы </h1>
                 <ul class="link">
-                	<li><i class="fa fa-angle-right"></i><a href="about.html"> о нас </a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="service.html"> услуги </a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="graph.html"> график </a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="doctor.html"> врачи </a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="prices.html"> цены </a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="contact.html"> связь </a></li>
+                	<li><i class="fa fa-angle-right"></i><a href="{% url 'about'  %}"> о нас </a></li>
+
+                    <li><i class="fa fa-angle-right"></i><a href="{% url 'graph'  %}"> график </a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="{% url 'doctor'  %}"> врачи </a></li>
+
+                    <li><i class="fa fa-angle-right"></i><a href="{% url 'contact'  %}"> связь </a></li>
                 </ul>
             </div>
             <div class="footerBox col-lg-3 col-md-3 col-sm-6 clearfix">
@@ -110,15 +127,15 @@
     	<div class="row">
         	<div class="footer-inner text-center">
             	<p>
-                	<a href="#" target="_blank"><img src="images/fb.png" alt="facebook" /></a>
-                    <a href="#" target="_blank"><img src="images/twt.png" alt="twitter" /></a>
-                    <a href="#" target="_blank"><img src="images/google.png" alt="google" /></a>
-                    <a href="#" target="_blank"><img src="images/lnkdin.png" alt="linkedin" /></a>
-                    <a href="#" target="_blank"><img class="hideImg" src="images/dribble.png" alt="dribble" /></a>
-                    <a href="#" target="_blank"><img class="hideImg" src="images/social-icon.png" alt="instagram" /></a>
-                    <a href="#" target="_blank"><img class="hideImg" src="images/social-icon2.png" alt="youtube" /></a>
+                	<a href="#" target="_blank"><img src="{% static 'images/fb.png' %}" alt="facebook" /></a>
+                    <a href="#" target="_blank"><img src="{% static 'images/twt.png' %}" alt="twitter" /></a>
+                    <a href="#" target="_blank"><img src="{% static 'images/google.png' %}" alt="google" /></a>
+                    <a href="#" target="_blank"><img src="{% static 'images/lnkdin.png' %}" alt="linkedin" /></a>
+                    <a href="#" target="_blank"><img class="hideImg" src="{% static 'images/dribble.png' %} " alt="dribble" /></a>
+                    <a href="#" target="_blank"><img class="hideImg" src="{% static 'images/social-icon.png' %}" alt="instagram" /></a>
+                    <a href="#" target="_blank"><img class="hideImg" src="{% static 'images/social-icon2.png' %}" alt="youtube" /></a>
                 </p>
-                <p> © 2016 Medics - мидицинский шаблон сайта HTML5 </p>
+                <p> © 2023 </p>
             </div>
         </div>
     </div>
@@ -133,7 +150,7 @@
 <script type="text/javascript" src="{% static 'js/smoothScroll.js' %}" ></script>
 <script type="text/javascript" src="{% static 'js/modernizr.js' %}" ></script>
 
-<script type="text/javascript" src="js/script.js" ></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}" ></script>
 
 </body>
 </html>
